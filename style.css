@@ -19,6 +19,8 @@ h2 {
 }
 
 nav {
+    width: 90vw;
+    margin: auto;
     padding: 15px;
     display: flex;
     flex-direction: row;
@@ -36,7 +38,12 @@ nav {
 }
 
 .logo-textbox {
-    padding-top: 30px;
+    padding-top: 24px;
+}
+
+#btn-box {
+    display: flex;
+    align-items: center;
 }
 
 #get-money-button {
