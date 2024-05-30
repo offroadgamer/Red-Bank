@@ -23,6 +23,11 @@ h2 {
     margin-left: 5px;
 }
 
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
 nav {
     width: 90vw;
     margin: auto;
@@ -33,6 +38,11 @@ nav {
 }
 
 .logo {
+    display: flex;
+    flex-direction: row;
+}
+
+#logo-link {
     display: flex;
     flex-direction: row;
 }
@@ -78,3 +88,16 @@ nav {
     font-size: 25px;;
 }
 
+#transaction-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cccccc;
+    padding: 50px;
+}
+
+.transaction-btn {
+    margin: 5px;
+    height: 40px;
+    width: 200px;
+}
