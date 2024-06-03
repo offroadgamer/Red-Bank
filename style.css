@@ -94,10 +94,23 @@ nav {
     align-items: center;
     background-color: #cccccc;
     padding: 50px;
+    visibility: hidden;
+    margin-top: 50px;
 }
 
 .transaction-btn {
     margin: 5px;
     height: 40px;
     width: 200px;
+}
+
+.close-btn {
+    background-color: transparent;
+    color: #000000;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+.close-btn:hover {
+    background-color: transparent;
 }
