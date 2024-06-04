@@ -17,10 +17,23 @@ button:hover {
     background-color: #98251A;
 }
 
+input {
+    background-color: #dddddd;
+    height: 30px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+}
+
 h2 {
     font-size: 30px;
     margin: 0;
     margin-left: 5px;
+}
+
+h3 {
+    font-weight: 400;
 }
 
 a {
@@ -61,10 +74,22 @@ nav {
     align-items: center;
 }
 
-#get-money-button {
+.login-btn {
     height: 50px;
     width: 150px;
     font-size: 15px;
+    margin-left: 50px;
+}
+
+#signup-btn {
+    background-color: transparent;
+    color: #000000;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+#signup-btn:hover {
+    color: #444444;
 }
 
 .nav-line {
@@ -113,4 +138,20 @@ nav {
 
 .close-btn:hover {
     background-color: transparent;
+    color: #444444;
+}
+
+#login-box {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+}
+
+#error-fillout-login {
+    font-weight: 300;
+    color: #e13423;
+    margin: 0px;
+    text-align: center;
+    visibility: hidden;
 }
