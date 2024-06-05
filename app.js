@@ -57,10 +57,18 @@ function login() {
     if (loginStatus == 1) {
         indexUsername = usernames.indexOf(username);
         indexPassword = passwords.indexOf(password);
+        document.getElementById("login-email-input").value = "";
+        document.getElementById("login-password-input").value = "";
         if(indexUsername == indexPassword) {
-            document.write("Match!")
+            document.getElementById("login-box").style.visibility = "hidden";
+            document.getElementById("message").innerHTML = "Logged in successfully";
+            document.getElementById("message").style.color = "#66cc66";
+            document.getElementById("message-box").style.visibility = "visible";
         } else {
-            document.write("Failed to log in...")
+            document.getElementById("login-box").style.visibility = "hidden";
+            document.getElementById("message").innerHTML = "Login Failed";
+            document.getElementById("message").style.color = "#e13423";
+            document.getElementById("message-box").style.visibility = "visible";
         } 
     } else if (loginStatus == 0) {
         if(username == "" || username == " " || password == "" || password == " ") {
@@ -69,7 +77,11 @@ function login() {
         } else {
             usernames.push(username);
             passwords.push(password);
-            console.log("Valid")
+            console.log("Valid");
+            document.getElementById("login-box").style.visibility = "hidden";
+            document.getElementById("message").innerHTML = "Logged in successfully";
+            document.getElementById("message").style.color = "#66cc66";
+            document.getElementById("message-box").style.visibility = "visible";
         }
         document.getElementById("login-email-input").value = "";
         document.getElementById("login-password-input").value = "";

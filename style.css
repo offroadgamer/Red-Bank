@@ -155,3 +155,20 @@ nav {
     text-align: center;
     visibility: hidden;
 }
+
+#message-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 400px;
+    visibility: hidden;
+}
+
+
+#message {
+    text-align: center;
+    color: #66cc66;
+}
