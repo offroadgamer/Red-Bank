@@ -41,6 +41,7 @@ a {
     color: #000000;
 }
 
+
 nav {
     width: 90vw;
     margin: auto;
@@ -160,6 +161,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     padding: 20px;
     background-color: #ffffff;
     position: absolute;
@@ -167,8 +169,19 @@ nav {
     visibility: hidden;
 }
 
-
 #message {
     text-align: center;
     color: #66cc66;
+}
+
+#login-message-btn {
+    background-color: transparent;
+    color: #000000;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+#login-message-btn:hover {
+    background-color: transparent;
+    color: #444444;
 }
