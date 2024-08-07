@@ -185,3 +185,9 @@ nav {
     background-color: transparent;
     color: #444444;
 }
+
+#logout-btn {
+    position: absolute;
+    right: 5vw;
+    visibility: hidden;
+}

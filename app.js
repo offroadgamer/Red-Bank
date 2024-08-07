@@ -2,6 +2,7 @@ let balance = 0;
 let transactionStatus = 2;
 let loginStatus = 2;
 let = loggedIn = false;
+let = loggedIn_usr = "";
 let accounts = [["ola", "123", 1000.00], ["gregor", "agurk", -700.00]]
 
 
@@ -40,6 +41,7 @@ function closeTransaction() {
 }
 
 function navLogin() {
+    document.getElementById("message-box").style.visibility = "hidden";
     loginStatus = 1;
     document.getElementById("login-box").style.visibility = "visible";
     document.getElementById("login-text").innerHTML = "Log in to red bank";
@@ -84,17 +86,21 @@ function login() {
             document.getElementById("message").innerHTML = "Logged in successfully!";
             document.getElementById("message").style.color = "#66cc66";
             document.getElementById("message-box").style.visibility = "visible";
-            console.log("SUCSESS!");
+            console.log("LOGIN: SUCSESS!");
             loggedIn = true;
             balance = accounts[usrn_index][2];
             document.getElementById("balance").innerHTML = "Your balance: $" + balance;
+            document.getElementById("login-btn").style.visibility = "hidden";
+            document.getElementById("logout-btn").style.visibility = "visible";
+            loggedIn_usr = accounts.indexOf(accounts[usrn_index])
+            console.log(loggedIn_usr);
         } else {
             document.getElementById("message-box").style.visibility = "visible";
             document.getElementById("login-box").style.visibility = "hidden";
             document.getElementById("message").innerHTML = "Login Failed";
             document.getElementById("message").style.color = "#e13423";
             document.getElementById("message-box").style.visibility = "visible";
-            console.log("FAILED!");
+            console.log("LOGIN: FAILED!");
         }
     } else if (loginStatus == 0) {
         if(username == "" || username == " " || password == "" || password == " ") {
@@ -114,3 +120,14 @@ function login() {
     
 }
 
+function logout() {
+    document.getElementById("login-btn").style.visibility = "visible";
+    document.getElementById("logout-btn").style.visibility = "hidden";
+    balance = 0;
+    document.getElementById("balance").innerHTML = "Your balance: $" + balance;
+    loggedIn = false;
+}
+
+if (loggedIn) {
+    document.getElementById("signin-btn").innerHTML = "Logged in as " + accounts[loggedIn_usr][0];
+}
