@@ -126,6 +126,7 @@ function logout() {
     balance = 0;
     document.getElementById("balance").innerHTML = "Your balance: $" + balance;
     loggedIn = false;
+    document.getElementById("message-box").style.visibility = "hidden";
 }
 
 if (loggedIn) {
